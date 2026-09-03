@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
 import { Card, CardBody, Typography } from "@material-tailwind/react";
 
+const DEFAULT_MEAL_IMAGE = "/icons/food-log-icon-192.png";
+
 export function CalorieHistoryCard({ meal }) {
   const { name, calories, date, image } = meal;
-  const imageSrc = image || "/img/home-decor-1.jpeg";
+  const imageSrc = image || DEFAULT_MEAL_IMAGE;
 
   return (
     <Card className="h-full min-h-[180px] border border-orange-100/60 bg-white/80 shadow-lg shadow-orange-100/40">
@@ -43,8 +45,4 @@ CalorieHistoryCard.propTypes = {
   }).isRequired,
 };
 
-CalorieHistoryCard.displayName = "/src/widgets/cards/calorie-history-card.jsx";
-
 export default CalorieHistoryCard;
-
-
