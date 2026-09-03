@@ -10,6 +10,8 @@ import {
 import { useMeal } from "@/context/meal";
 import { resolveBackendImage, saveMeal } from "@/api";
 
+const DEFAULT_MEAL_IMAGE = "/icons/food-log-icon-192.png";
+
 export default function Result() {
   const { capture, analysis, setCapture, setAnalysis, refreshMeals } = useMeal();
   const navigate = useNavigate();
@@ -27,7 +29,7 @@ export default function Result() {
     if (capture?.previewUrl) return capture.previewUrl;
     const backendImage = analysis?.image || analysis?.image_url;
     if (backendImage) return resolveBackendImage(backendImage);
-    return "/img/home-decor-1.jpeg";
+    return DEFAULT_MEAL_IMAGE;
   }, [analysis, capture]);
 
   const ingredients = analysis?.ingredients || [];
