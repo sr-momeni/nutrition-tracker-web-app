@@ -4,11 +4,11 @@ import { getProfile } from "@/api";
 import { getUser } from "@/utils/auth";
 
 const fallbackProfile = {
-  name: "Salar Momeni",
-  email: "momeni.salar@gmail.com",
-  age: 25,
-  weight: 72,
-  goal: "Maintain healthy weight",
+  name: "Food Log User",
+  email: "user@example.com",
+  age: "--",
+  weight: "--",
+  goal: "Maintain healthy nutrition habits",
 };
 
 export default function Profile() {
@@ -65,7 +65,7 @@ export default function Profile() {
     () => [
       { label: "Email", value: profile.email },
       { label: "Age", value: `${profile.age}` },
-      { label: "Weight", value: `${profile.weight} kg` },
+      { label: "Weight", value: profile.weight === "--" ? "--" : `${profile.weight} kg` },
       { label: "Goal", value: profile.goal },
     ],
     [profile]
