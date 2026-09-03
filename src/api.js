@@ -4,6 +4,7 @@ export const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:5000";
 
 const API_PREFIX = "/api";
+const DEFAULT_MEAL_IMAGE = "/icons/food-log-icon-192.png";
 
 export const apiClient = axios.create({
   baseURL: `${API_BASE_URL}${API_PREFIX}`,
@@ -32,7 +33,11 @@ const buildImageUrl = (value) => {
   if (value.startsWith("http")) return value;
 
   const normalized = value.replace(/\\/g, "/").replace(/^\/+/, "");
-  return `${API_BASE_URL}/uploads/${normalized.startsWith("uploads/") ? normalized.replace(/^uploads\//, "") : normalized}`;
+  return `${API_BASE_URL}/uploads/${
+    normalized.startsWith("uploads/")
+      ? normalized.replace(/^uploads\//, "")
+      : normalized
+  }`;
 };
 
 export const uploadMeal = async (file) => {
@@ -79,7 +84,7 @@ export const getProfile = async () => {
 
 export const resolveBackendImage = (value) => {
   const url = buildImageUrl(value);
-  return url || "/img/home-decor-1.jpeg";
+  return url || DEFAULT_MEAL_IMAGE;
 };
 
 export default {

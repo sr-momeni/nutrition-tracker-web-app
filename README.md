@@ -48,20 +48,24 @@ The app supports an end-to-end meal logging workflow: users can authenticate, up
 ### Installation
 
 ```bash
-git clone https://github.com/sr-momeni/Personal-food-log-app.git
-cd Personal-food-log-app
+git clone https://github.com/sr-momeni/nutrition-tracker-web-app.git
+cd nutrition-tracker-web-app
 npm install
 ```
 
 ### Environment Configuration
 
-Create a `.env` file in the project root:
+Copy the example environment file and adjust the backend URL if needed:
+
+```bash
+cp .env.example .env
+```
+
+Default development configuration:
 
 ```env
 VITE_API_BASE_URL=http://127.0.0.1:5000
 ```
-
-If `VITE_API_BASE_URL` is not defined, the frontend defaults to `http://127.0.0.1:5000`.
 
 The frontend currently expects the following API routes under `/api`:
 
@@ -116,5 +120,10 @@ This project demonstrates practical experience with:
 - Responsive UI development
 - PWA configuration
 
+## Credits
+
+The interface uses Material Tailwind components. The project began from a Material Tailwind dashboard scaffold and was substantially customized for the nutrition-tracking workflow; unused scaffold pages, sample data, and template assets have been removed from the portfolio version.
+
 ## Status
+
 This is a prototype. The current client-side authentication/session approach is suitable for demonstration purposes and would require additional backend security hardening for production use.
