@@ -117,5 +117,4 @@ This project demonstrates practical experience with:
 - PWA configuration
 
 ## Status
-
 This is a prototype. The current client-side authentication/session approach is suitable for demonstration purposes and would require additional backend security hardening for production use.
