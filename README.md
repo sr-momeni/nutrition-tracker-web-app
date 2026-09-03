@@ -116,10 +116,5 @@ This project demonstrates practical experience with:
 - Responsive UI development
 - PWA configuration
 
-## Acknowledgements
-
-The application UI was developed using Material Tailwind components and was adapted from a Material Tailwind dashboard foundation before being customized for the food logging and nutrition tracking workflow.
-
 ## Status
-
-Portfolio prototype. The current client-side authentication/session approach is suitable for demonstration purposes and would require additional backend security hardening for production use.
+This is a prototype. The current client-side authentication/session approach is suitable for demonstration purposes and would require additional backend security hardening for production use.
