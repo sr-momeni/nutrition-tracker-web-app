@@ -6,6 +6,7 @@ The app supports an end-to-end meal logging workflow: users can authenticate, up
 
 ## Features
 
+
 - User authentication flow and protected routes
 - Meal image upload and processing workflow
 - Integration with a REST API for meal analysis and nutrition estimates
